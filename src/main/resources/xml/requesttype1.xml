@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<request>
+    <protocol-version>4.00</protocol-version>
+    <request-type>1</request-type>
+    <terminal-id>1839</terminal-id>
+    <extra name="login">****</extra>
+    <extra name="password-md5">****</extra>
+    <extra name="client-software">XML v1.9</extra>
+    <extra name="update_condition">21</extra>
+    <transaction-number>021508040001364907</transaction-number>
+    <from>
+        <amount currency-code="417">10</amount>
+    </from>
+    <to>
+        <service-id>5132</service-id>
+        <account-number>996701232200</account-number>
+        <amount currency-code="417">10</amount>
+    </to>
+    <receipt>
+        <datetime>20150804000113</datetime>
+        <receipt-number>021508040001364907</receipt-number>
+    </receipt>
+</request>

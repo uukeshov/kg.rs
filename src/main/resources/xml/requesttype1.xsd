@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified">
+    <xs:element name="request">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element ref="protocol-version"/>
+                <xs:element ref="request-type"/>
+                <xs:element ref="terminal-id"/>
+                <xs:element maxOccurs="unbounded" ref="extra"/>
+                <xs:element ref="transaction-number"/>
+                <xs:element ref="from"/>
+                <xs:element ref="to"/>
+                <xs:element ref="receipt"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+    <xs:element name="protocol-version" type="xs:decimal"/>
+    <xs:element name="request-type" type="xs:integer"/>
+    <xs:element name="terminal-id" type="xs:integer"/>
+    <xs:element name="extra">
+        <xs:complexType mixed="true">
+            <xs:attribute name="name" use="required" type="xs:NCName"/>
+        </xs:complexType>
+    </xs:element>
+    <xs:element name="transaction-number" type="xs:integer"/>
+    <xs:element name="from">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element ref="amount"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+    <xs:element name="to">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element ref="service-id"/>
+                <xs:element ref="account-number"/>
+                <xs:element ref="amount"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+    <xs:element name="service-id" type="xs:integer"/>
+    <xs:element name="account-number" type="xs:integer"/>
+    <xs:element name="receipt">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element ref="datetime"/>
+                <xs:element ref="receipt-number"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+    <xs:element name="datetime" type="xs:integer"/>
+    <xs:element name="receipt-number" type="xs:integer"/>
+    <xs:element name="amount">
+        <xs:complexType>
+            <xs:simpleContent>
+                <xs:extension base="xs:integer">
+                    <xs:attribute name="currency-code" use="required" type="xs:integer"/>
+                </xs:extension>
+            </xs:simpleContent>
+        </xs:complexType>
+    </xs:element>
+</xs:schema>

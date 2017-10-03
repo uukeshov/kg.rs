@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<response>
+    <protocol-version>4.00</protocol-version>
+    <request-type>1</request-type>
+    <terminal-id>1839</terminal-id>
+    <result-code>0</result-code>
+    <result-code>0</result-code>
+    <operator-id>2237</operator-id>
+    <extra name="REMOTE_ADDR">127.0.0.1</extra>
+    <extra name="serial">000000-000000</extra>
+    <extra name="BALANCE">911283.64</extra>
+    <extra name="OVERDRAFT">0</extra>
+    <extra name="user_name">Hwan Hasan</extra>
+    <extra name="ServerTime">2015-08-04T00:00:47.467</extra>
+    <status-id>30</status-id>
+    <transaction-number>21508040001364907</transaction-number>
+    <txn-id>12345</txn-id>
+    <to>
+        <service-id>5132</service-id>
+        <amount>10.00</amount>
+        <account-number>996701232200</account-number>
+    </to>
+</response>
