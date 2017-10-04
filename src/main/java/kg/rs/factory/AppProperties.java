@@ -15,7 +15,6 @@ public class AppProperties {
             }
 
             if (operationType.equals(AppProperties.action.PAYMENT.operationType)) {
-                System.out.println(3);
                 this.action = Action.PAYMENT;
                 break;
             }
